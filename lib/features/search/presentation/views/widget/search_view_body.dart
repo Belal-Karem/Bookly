@@ -1,6 +1,6 @@
 import 'package:bookly/core/utils/style.dart';
-import 'package:bookly/features/search/presentation/view_model/views/widget/custom_search_text_field.dart';
-import 'package:bookly/features/search/presentation/view_model/views/widget/search_result_list_view.dart';
+import 'package:bookly/features/search/presentation/views/widget/custom_search_text_field.dart';
+import 'package:bookly/features/search/presentation/views/widget/search_result_list_view.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 

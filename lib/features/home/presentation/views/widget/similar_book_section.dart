@@ -1,5 +1,5 @@
 import 'package:bookly/core/utils/style.dart';
-import 'package:bookly/features/home/presentation/view_model/views/widget/similar_books_list_view.dart';
+import 'package:bookly/features/home/presentation/views/widget/similar_books_list_view.dart';
 import 'package:flutter/widgets.dart';
 
 class SimilarBookSection extends StatelessWidget {
