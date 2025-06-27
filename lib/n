@@ -6,24 +6,20 @@ import 'package:dartz/dartz.dart';
 import 'package:dio/dio.dart';
 
 class HomeRepoImpl implements HomeRepo {
-  final ApiServer apiService;
+  final ApiServer apiServer;
 
-  HomeRepoImpl(this.apiService);
+  HomeRepoImpl(this.apiServer);
+
   @override
   Future<Either<Faliures, List<BookModel>>> fetchNewsetBooks() async {
     try {
-      var data = await apiService.get(
-        endPoint: 'volumes?Filtering=free-ebooks&Sorting=newest&q=Programming',
+      var data = await apiServer.get(
+        endPoint: 'volumes?filter=free-ebooks&q=programming&orderBy=newest',
       );
       List<BookModel> books = [];
       for (var item in data['items']) {
-        try {
-          books.add(BookModel.fromJson(item));
-        } catch (e) {
-          books.add(BookModel.fromJson(item));
-        }
+        books.add(BookModel.fromJson(item));
       }
-
       return right(books);
     } catch (e) {
       if (e is DioError) {
@@ -36,9 +32,7 @@ class HomeRepoImpl implements HomeRepo {
   @override
   Future<Either<Faliures, List<BookModel>>> fetchFeaturedBooks() async {
     try {
-      var data = await apiService.get(
-        endPoint: 'volumes?Filtering=free-ebooks&q=subject:Programming',
-      );
+      var data = await apiServer.get(endPoint: 'volumes?q=programming');
       List<BookModel> books = [];
       for (var item in data['items']) {
         books.add(BookModel.fromJson(item));
@@ -53,3 +47,28 @@ class HomeRepoImpl implements HomeRepo {
     }
   }
 }
+
+
+
+ Container(
+        decoration: BoxDecoration(
+          borderRadius: BorderRadius.circular(16),
+          // color: Colors.amber,
+          image: DecorationImage(
+            fit: BoxFit.fill,
+            image: NetworkImage(imageUrl),
+          ),
+        ),
+      )
+
+
+      Container(
+                decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(8),
+                  color: Colors.amber,
+                  image: DecorationImage(
+                    fit: BoxFit.fill,
+                    image: AssetImage(AssetsData.testImage),
+                  ),
+                ),
+              ),
