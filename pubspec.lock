@@ -408,6 +408,14 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "0.28.0"
+  shimmer_loading_animation:
+    dependency: "direct main"
+    description:
+      name: shimmer_loading_animation
+      sha256: a78b33bec173f755a18e52fb0c8138c285d16d5c058f9ac5bb7ca4a5f8096b83
+      url: "https://pub.dev"
+    source: hosted
+    version: "0.1.0"
   sky_engine:
     dependency: transitive
     description: flutter
