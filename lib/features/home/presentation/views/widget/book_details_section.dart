@@ -1,10 +1,13 @@
 import 'package:bookly/core/utils/style.dart';
+import 'package:bookly/features/home/data/model/book_model/book_model.dart';
 import 'package:bookly/features/home/presentation/views/widget/book_rating.dart';
 import 'package:bookly/features/home/presentation/views/widget/custom_book_item.dart';
 import 'package:flutter/widgets.dart';
 
 class BookDetailsSection extends StatelessWidget {
-  const BookDetailsSection({super.key});
+  const BookDetailsSection({super.key, required this.bookModel});
+
+  final BookModel bookModel;
 
   @override
   Widget build(BuildContext context) {
@@ -14,18 +17,24 @@ class BookDetailsSection extends StatelessWidget {
       children: [
         Padding(
           padding: EdgeInsets.symmetric(horizontal: width * 0.17),
-          child: const CustomBookItem(
-            imageUrl:
-                'https://books.google.com/books/content?id=6AkgAAAAIAAJ&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api',
+          child: CustomBookItem(
+            imageUrl: bookModel.volumeInfo.imageLinks.thumbnail,
           ),
         ),
         const SizedBox(height: 43),
-        const Text('The Jungle Book', style: Style.textStyle30),
+        Text(
+          bookModel.volumeInfo.title ?? '',
+          style: Style.textStyle30,
+          textAlign: TextAlign.center,
+        ),
         const SizedBox(height: 6),
         Opacity(
           opacity: 0.7,
           child: Text(
-            'Rudyard Kipling',
+            bookModel.volumeInfo.authors != null &&
+                    bookModel.volumeInfo.authors!.isNotEmpty
+                ? bookModel.volumeInfo.authors![0]
+                : 'Not known',
             style: Style.textStyle18.copyWith(fontStyle: FontStyle.italic),
           ),
         ),
