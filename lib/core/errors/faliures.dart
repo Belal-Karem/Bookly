@@ -35,8 +35,6 @@ class ServerFaliure extends Faliures {
           return ServerFaliure('No internst connection');
         }
         return ServerFaliure('Unexpected error ,please try letar');
-      default:
-        return ServerFaliure('Opps there was an error,please try again');
     }
   }
 
