@@ -12,4 +12,4 @@ Bookly is a stylish and powerful app that helps you explore, discover, and learn
 🔎 Easily search and explore a wide range of books to find your next great read.
 
 
->>>>>>> 01aa5c3ed211cb11733baa5bb0435942f1178304
+![Bookly Banner](assets\images\bookly.png)
