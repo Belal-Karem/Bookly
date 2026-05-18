@@ -14,5 +14,5 @@ Bookly is a stylish and powerful app that helps you explore, discover, and learn
 ## Screenshots
 
 <p align="center">
-  <img src="assets\images\bookly.png" width="250"/>
+  <img src="assets\images\bookly.png"/>
 </p>
