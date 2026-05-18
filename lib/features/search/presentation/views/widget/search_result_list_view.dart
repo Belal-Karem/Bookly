@@ -14,7 +14,7 @@ class SearchResultListView extends StatelessWidget {
     final ratingProvider = AverageRating();
     return ListView.builder(
       padding: EdgeInsets.zero,
-      itemCount: 20,
+      itemCount: bookModel.length,
       itemBuilder: (context, index) {
         final ratingData =
             index < ratingProvider.mockBooks.length

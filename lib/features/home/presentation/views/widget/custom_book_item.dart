@@ -1,4 +1,4 @@
-import 'package:bookly/features/home/presentation/views/widget/custom_book_image.dart';
+import 'package:bookly/core/widget/custom_book_image.dart';
 import 'package:flutter/material.dart';
 import 'package:shimmer_loading_animation/shimmer_loading_animation.dart';
 

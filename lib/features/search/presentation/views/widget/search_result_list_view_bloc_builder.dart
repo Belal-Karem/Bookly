@@ -1,10 +1,11 @@
+import 'package:bookly/core/helper_function/get_dummy_book.dart';
 import 'package:bookly/features/home/presentation/manger/search_book_cubit/search_cubit.dart';
 import 'package:bookly/features/search/presentation/views/widget/search_result_list_view.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:skeletonizer/skeletonizer.dart';
 
 import '../../../../../core/widget/custom_error_widget.dart';
-import '../../../../../core/widget/custom_loding_indicator.dart';
 
 class SearchResultListViewBlocBuilder extends StatelessWidget {
   const SearchResultListViewBlocBuilder({super.key});
@@ -18,7 +19,11 @@ class SearchResultListViewBlocBuilder extends StatelessWidget {
         } else if (state is SearchFailuer) {
           return CustomErrorWidget(errMessage: state.errMessage);
         } else {
-          return const CustomLodingIndicator();
+          return Expanded(
+            child: Skeletonizer(
+              child: SearchResultListView(bookModel: dummyBooksList),
+            ),
+          );
         }
       },
     );

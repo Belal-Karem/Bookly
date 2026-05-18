@@ -29,7 +29,7 @@ class _SearchViewbodyState extends State<SearchViewbody> {
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           CustomAppBar(
-            icon: FontAwesomeIcons.magnifyingGlass,
+            icon: FontAwesomeIcons.arrowRight,
             onPressed: () {
               GoRouter.of(context).pop();
             },

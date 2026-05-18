@@ -6,7 +6,7 @@ import '../../../../../core/utils/app_router.dart';
 import '../../../../../core/utils/style.dart';
 import '../../../../home/data/model/book_model/book_model.dart';
 import '../../../../home/presentation/views/widget/book_rating.dart';
-import '../../../../home/presentation/views/widget/custom_book_image.dart';
+import '../../../../../core/widget/custom_book_image.dart';
 
 class SearchResultListViewItem extends StatelessWidget {
   const SearchResultListViewItem({

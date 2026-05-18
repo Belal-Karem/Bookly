@@ -9,7 +9,7 @@ class CustomBookImage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return CachedNetworkImage(
-      placeholder: (context, url) => CircularProgressIndicator(),
+      placeholder: (context, url) => Container(color: Colors.grey.shade300),
       errorWidget: (context, url, error) => Icon(Icons.error_outline),
       fit: BoxFit.fill,
       imageUrl: imageUrl,
