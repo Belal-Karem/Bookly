@@ -1,16 +1,15 @@
 # bookly
 
-A new Flutter project.
 
-## Getting Started
+Bookly is a stylish and powerful app that helps you explore, discover, and learn more about books tailored to your interests.
 
-This project is a starting point for a Flutter application.
+## The feature
 
-A few resources to get you started if this is your first Flutter project:
+🔍 Discover books that match your taste with a smart recommendation system based on your reading habits and interests.
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+📚 Dive deeper into every book with detailed information like summaries, author biographies, ratings, and awards.
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+🔎 Easily search and explore a wide range of books to find your next great read.
+
+
+>>>>>>> 01aa5c3ed211cb11733baa5bb0435942f1178304

@@ -9,6 +9,7 @@ class ApiServer {
 
   Future<Map<String, dynamic>> get({required String endPoint}) async {
     var response = await _dio.get('$_baseUrl$endPoint&key=$kApiKey');
+
     return response.data;
   }
 }

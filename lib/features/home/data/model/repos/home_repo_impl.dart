@@ -1,5 +1,3 @@
-import 'dart:developer';
-
 import 'package:bookly/core/errors/faliures.dart';
 import 'package:bookly/core/utils/api_server.dart';
 import 'package:bookly/features/home/data/model/book_model/book_model.dart';
@@ -30,7 +28,6 @@ class HomeRepoImpl implements HomeRepo {
       return right(books);
     } catch (e) {
       if (e is DioError) {
-        log(e.toString());
         return left(ServerFaliure.fromDioError(e));
       }
       return left(ServerFaliure(e.toString()));
@@ -53,7 +50,7 @@ class HomeRepoImpl implements HomeRepo {
       if (e is DioError) {
         return left(ServerFaliure.fromDioError(e));
       }
-      log('fetchFeaturedBooks: ${e.toString()}');
+
       return left(ServerFaliure(e.toString()));
     }
   }

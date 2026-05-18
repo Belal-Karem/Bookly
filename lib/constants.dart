@@ -8,7 +8,6 @@ const kGTsectrafine = 'GT Sectra Fine';
 const kApiKey = 'AIzaSyBV-Olo2JAAhB12Qmg2sOzcfVtRCDr-HO4';
 const EdgeInsets khomepaddingfromlift = EdgeInsets.symmetric(horizontal: 30);
 
-// There is no rating and count in the API
 class AverageRating {
   final List<Map<String, dynamic>> mockBooks = [
     {'averageRating': 4.5, 'ratingsCount': 120},
